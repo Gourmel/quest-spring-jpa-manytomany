@@ -34,6 +34,22 @@ public class WizardController {
         return "wizards";
     }
 
+    public CourseRepository getCourseRepository() {
+        return courseRepository;
+    }
+
+    public void setCourseRepository(CourseRepository courseRepository) {
+        this.courseRepository = courseRepository;
+    }
+
+    public WizardRepository getWizardRepository() {
+        return wizardRepository;
+    }
+
+    public void setWizardRepository(WizardRepository wizardRepository) {
+        this.wizardRepository = wizardRepository;
+    }
+
     @GetMapping("/wizard/register")
     public String getRegister(Model out,
                               @RequestParam Long idWizard) {
